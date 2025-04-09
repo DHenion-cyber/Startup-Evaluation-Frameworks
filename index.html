@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Evaluation Matrix</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Include React and ReactDOM via CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Include Babel for JSX transpilation in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- Define and Render React Component -->
+    <script type="text/babel">
+      const EvaluationMatrix = () => {
+        // Note: React is available globally via CDN script
+        return (
+          <div className="w-full font-sans">
+            <div className="overflow-x-auto">
+              <table className="min-w-full bg-white border border-gray-200 shadow-md rounded-lg">
+                <thead>
+                  <tr className="bg-gray-800 text-white">
+                    <th className="py-3 px-4 text-left">Evaluation Dimension</th>
+                    <th className="py-3 px-4 text-left">Key Questions</th>
+                    <th className="py-3 px-4 text-left">Related Frameworks</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* Value Proposition Clarity */}
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="py-3 px-4 font-bold">Value Proposition Clarity</td>
+                    <td className="py-3 px-4">
+                      <ul className="list-disc pl-5 text-sm">
+                        <li>Is the problem clearly defined?</li>
+                        <li>Is the solution specifically articulated?</li>
+                        <li>Is there a quantifiable benefit to users?</li>
+                        <li>Does it address a significant pain point?</li>
+                      </ul>
+                    </td>
+                    <td className="py-3 px-4">
+                      <ul className="list-disc pl-5 text-sm">
+                        <li>Value Proposition Canvas</li>
+                        <li>SWOT Analysis (Strengths)</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  
+                  {/* Customer Needs Alignment */}
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="py-3 px-4 font-bold">Customer Needs Alignment</td>
+                    <td className="py-3 px-4">
+                      <ul className="list-disc pl-5 text-sm">
+                        <li>Is the target user clearly identified?</li>
+                        <li>Is there evidence of customer discovery?</li>
+                        <li>Are user needs thoroughly understood?</li>
+                        <li>Does the solution fit into existing workflows?</li>
+                      </ul>
+                    </td>
+                    <td className="py-3 px-4">
+                      <ul className="list-disc pl-5 text-sm">
+                        <li>Value Proposition Canvas</li>
+                        <li>Rock Health (Business Model)</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  
+                  {/* Market Readiness */}
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="py-3 px-4 font-bold">Market Readiness & Demand</td>
+                    <td className="py-3 px-4">
+                      <ul className="list-disc pl-5 text-sm">
+                        <li>Is there evidence of market demand?</li>
+                        <li>Is the timing right for this solution?</li>
+                        <li>Are there favorable industry trends?</li>
+                        <li>Is the market size sufficient?</li>
+                      </ul>
+                    </td>
+                    <td className="py-3 px-4">
+                      <ul className="list-disc pl-5 text-sm">
+                        <li>SWOT Analysis (Opportunities)</li>
+                        <li>Rock Health (Market Opportunity)</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  
+                  {/* Operational Feasibility */}
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="py-3 px-4 font-bold">Operational Feasibility</td>
+                    <td className="py-3 px-4">
+                      <ul className="list-disc pl-5 text-sm">
+                        <li>Does the team have necessary expertise?</li>
+                        <li>Is the technology development plan realistic?</li>
+                        <li>Are there clear milestones and timelines?</li>
+                        <li>Is the funding strategy appropriate?</li>
+                      </ul>
+                    </td>
+                    <td className="py-3 px-4">
+                      <ul className="list-disc pl-5 text-sm">
+                        <li>Rock Health (Team, Technology)</li>
+                        <li>SWOT Analysis (Strengths, Weaknesses)</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  
+                  {/* Regulatory & Compliance */}
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="py-3 px-4 font-bold">Regulatory & Compliance</td>
+                    <td className="py-3 px-4">
+                      <ul className="list-disc pl-5 text-sm">
+                        <li>Is the regulatory pathway identified?</li>
+                        <li>Are privacy considerations addressed?</li>
+                        <li>Is there awareness of compliance requirements?</li>
+                        <li>Is there a data governance strategy?</li>
+                      </ul>
+                    </td>
+                    <td className="py-3 px-4">
+                      <ul className="list-disc pl-5 text-sm">
+                        <li>Rock Health (Regulatory & Legal)</li>
+                        <li>SWOT Analysis (Threats)</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  
+                  {/* Risk Assessment */}
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="py-3 px-4 font-bold">Risk Assessment & Mitigation</td>
+                    <td className="py-3 px-4">
+                      <ul className="list-disc pl-5 text-sm">
+                        <li>Are key risks identified?</li>
+                        <li>Are there mitigation strategies in place?</li>
+                        <li>Is there consideration of competitive threats?</li>
+                        <li>Are adoption barriers acknowledged?</li>
+                      </ul>
+                    </td>
+                    <td className="py-3 px-4">
+                      <ul className="list-disc pl-5 text-sm">
+                        <li>SWOT Analysis (Weaknesses, Threats)</li>
+                        <li>Rock Health (Market Opportunity)</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  
+                  {/* Strategic Growth */}
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="py-3 px-4 font-bold">Strategic Fit for Growth</td>
+                    <td className="py-3 px-4">
+                      <ul className="list-disc pl-5 text-sm">
+                        <li>Is there a clear vision for growth?</li>
+                        <li>Are there additional use cases or markets?</li>
+                        <li>Is there potential for platform expansion?</li>
+                        <li>Does the solution create lasting value?</li>
+                      </ul>
+                    </td>
+                    <td className="py-3 px-4">
+                      <ul className="list-disc pl-5 text-sm">
+                        <li>McKinsey's Three Horizons</li>
+                        <li>Rock Health (Scalability)</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        );
+      };
+
+      // Render the component
+      // Note: ReactDOM is available globally via CDN script
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(<EvaluationMatrix />);
+    </script>
+</body>
+</html>
